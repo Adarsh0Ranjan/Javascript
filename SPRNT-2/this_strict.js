@@ -4,11 +4,13 @@
 
 
 // "use strict";
-// varName="loki";
-// console.log(varName);
+// var varName = "loki";
+// console.log(varName); 
+
 
 /*****************question1***********************/
-// "use strict";  // in strict mode we dont have access to window
+// "use strict";  // in strict mode we dont have access to window it
+// var firstName = "loki";
 // let cap = {
 //     // property
 //     firstName: "Steve",
@@ -58,26 +60,26 @@
 // cap.sayHi();
 
 // *******************question 4********************
-"use strict";
-let cap2 = {
-    firstName: "Steve",
-    sayHi: function () {
-        console.log("91", this.firstName);
-        // arrow ->  does not have it's own this. I am going to cheat it from outside 
-        const subInner = () => {
-            console.log("94", this.firstName);
-            const iAmInner = () => {
-                console.log("95", this.firstName);
+// "use strict";
+// let cap2 = {
+//     firstName: "Steve",
+//     sayHi: function () {
+//         console.log("91", this.firstName);
+//         // arrow ->  does not have it's own this. I am going to cheat it from outside 
+//         const subInner = () => {
+//             console.log("94", this.firstName);
+//             const iAmInner = () => {
+//                 console.log("95", this.firstName);
                 
-                // const iAmSupperInner = function () {
-                //     console.log("49", this.firstName);
-                // }
+//                 // const iAmSupperInner = function () {
+//                 //     console.log("49", this.firstName);
+//                 // }
 
-                // iAmSupperInner();
-            }
-            iAmInner();
-        }
-        subInner();
-    }
-}
-cap2.sayHi();
+//                 // iAmSupperInner();
+//             }
+//             iAmInner();
+//         }
+//         subInner();
+//     }
+// }
+// cap2.sayHi();

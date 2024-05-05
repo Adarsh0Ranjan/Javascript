@@ -4,9 +4,9 @@
  * **/
 
 
-function fn(param1, param2, param3= "default") {
-    console.log("Hi params are ", param1, param2, param3);
-}
+// function fn(param1, param2, param3= "default") {
+//     console.log("Hi params are ", param1, param2, param3);
+// }
 
 // fn("Hi", "Hello", "Hola");
 // fn("Hi", "Hello");
@@ -20,7 +20,7 @@ function fn(param1, param2, param3= "default") {
 // assignment operator -> reference remain
 // let arr = [1, 2, 3, 4, 5];
 
-// // arr2 and arr has the same ref
+// // // arr2 and arr has the same ref
 // let arr2 = arr;    // Shallow copy
 // arr2.pop();
 // arr2.push(100);
@@ -48,7 +48,7 @@ function fn(param1, param2, param3= "default") {
 // Statement 3 ---------------------------------------------------------------
 
 // let a = 10;
-// //copied value -> primitive types 
+// // //copied value -> primitive types 
 // let b = a;    // Deep copy not shallow copy
 
 // let arr = [1,2,3,4]
@@ -68,11 +68,11 @@ function fn(param1, param2, param3= "default") {
  *  use you to collect remianing parameters numbers of params . 
  * ***/
 
-function fn(param1, ...param2) {
-    console.log(" params are ", param1);
-    console.log("Rest paramateres",param2);
-}
+// function fn(param1, ...param2) {
+//     console.log(" params are ", param1);
+//     console.log("Rest paramateres",param2);
+// }
 
-// ...(...arr) == arr.toString();  -> This is how I remember spread of spread.
-fn("Hi", "Hello");
-fn("Hi", "Hello", "Naga", "Meena", "Gaurav", "shravya", "Adarsh");
+// // ...(...arr) == arr.toString();  -> This is how I remember spread of spread.
+// fn("Hi", "Hello");
+// fn("Hi", "Hello", "Naga", "Meena", "Gaurav", "shravya", "Adarsh");

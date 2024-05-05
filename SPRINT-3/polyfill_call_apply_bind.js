@@ -69,18 +69,18 @@ let ironMan = {
 // cap.petersTeam.myApply(ironMan, ["thor", "loki"]);
 
 
-Function.prototype.myBind = function (requiredObject) {
-    // get your function.
-    const functionToBeInvoked = this;
+// Function.prototype.myBind = function (requiredObject) {
+//     // get your function.
+//     const functionToBeInvoked = this;
 
 
 
-    return function(...args){
-        functionToBeInvoked.call(requiredObject, ...args);
-    }
-}
+//     return function(...args){
+//         functionToBeInvoked.call(requiredObject, ...args);
+//     }
+// }
 
-const boundFn = cap.petersTeam.myBind(ironMan);
-boundFn(["thor", "loki", "rajneesh", "arti", "jagdish"], "Hema");
+// const boundFn = cap.petersTeam.myBind(ironMan);
+// boundFn(["thor", "loki", "rajneesh", "arti", "jagdish"], "Hema");
 
 

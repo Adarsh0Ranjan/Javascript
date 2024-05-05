@@ -21,13 +21,13 @@ let ironMan = {
 //  * Apply: borrow the method only once with n no number of param 
 //  * **/
 let membersArray = ["thor", "loki", "Rajneesh", "Sudheer", "Tapaswini"]
-// cap.petersTeam.apply(ironMan, membersArray);
+// cap.petersTeam.apply(ironMan, membersArray);  // DOUBT:-> if we passing n params but any way it is atking only two, how it is making sense
 
 /*****
  * bind : making permanent copy of that method to use multiple times
  * ******/
-const boundFn = cap.petersTeam.bind(ironMan);
-boundFn(membersArray, "Roman")   
+// const boundFn = cap.petersTeam.bind(ironMan);
+// boundFn(membersArray, "Roman")
                                                                           
 // Guess the answer.-------------------------------------
 // var name = "superman";
