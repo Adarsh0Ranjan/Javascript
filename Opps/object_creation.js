@@ -8,21 +8,21 @@
  * 1. properties and methods
  * 2. Object -> as your prototype (parent)
  * ***/
-// let obj = {
-//     name: "Steve",
-//     address: {
-//         state: "Newyork",
-//         city: "Manhatten"
-//     },
-//     sayHi: function () {
-//         console.log(`${this.name} say's Hi`);
-//         // console.log("object this: ", this);
-//         return this;
-//     }
-// };
-// console.log("Object", obj);
-// obj.sayHi();
-// console.log("Object This: ", obj.sayHi());
+let obj = {
+    name: "Steve",
+    address: {
+        state: "Newyork",
+        city: "Manhatten"
+    },
+    sayHi: function () {
+        console.log(`${this.name} say's Hi`);
+        // console.log("object this: ", this);
+        return this;
+    }
+};
+console.log("Object", obj);
+obj.sayHi();
+console.log("Object This: ", obj.sayHi());
 
 /* Different data types and there parents. **/
 // console.log([1,2,3,4]);
@@ -89,70 +89,70 @@
 
 /********2. creating an object from another object*/
 
-let obj = {
-    name: "Steve",
-    address: {
-        state: "Newyork",
-        city: "Manhatten"
-    },
-    sayHi: function () {
-        console.log(`${this.name} say's Hi`);
-    }
-};
+// let obj = {
+//     name: "Steve",
+//     address: {
+//         state: "Newyork",
+//         city: "Manhatten"
+//     },
+//     sayHi: function () {
+//         console.log(`${this.name} say's Hi`);
+//     }
+// };
 
-let obj2 = Object.create(obj);
-console.log(obj2);
+// let obj2 = Object.create(obj);
+// console.log(obj2);
 
-/**overriden the name prop*/
-obj2.name = "symphony";
-obj2.lastname = "rogers";
-console.log("1.", obj2.name, " ", obj2.lastname, obj2.address);
-console.log("2. ", obj.lastname);
+// /**overriden the name prop*/
+// obj2.name = "symphony";
+// obj2.lastname = "rogers";
+// console.log("1.", obj2.name, " ", obj2.lastname, obj2.address);
+// console.log("2. ", obj.lastname);
 
-console.log(obj.isPrototypeOf(obj2));  // true: is `obj` is parent of `obj2`.
-console.log(obj2.isPrototypeOf(obj));  // false: is `obj2` is parent of `obj`.
+// console.log(obj.isPrototypeOf(obj2));  // true: is `obj` is parent of `obj2`.
+// console.log(obj2.isPrototypeOf(obj));  // false: is `obj2` is parent of `obj`.
 
-let obj3 = Object.create(obj2);
-obj3.friends = ["tony", "bruce"]
-obj3.fullName = obj2.name + " " + obj2.lastname;
-obj3.age = 25;
-console.log(obj3);
+// let obj3 = Object.create(obj2);
+// obj3.friends = ["tony", "bruce"]
+// obj3.fullName = obj2.name + " " + obj2.lastname;
+// obj3.age = 25;
+// console.log(obj3);
 
-//  loop -> object -> for in loop -> iterate over all the prop of the object , 
-// inherited which are enumrable to for in
-for (let key in obj3) {
-    console.log("Keys are ", key);
-}
+// //  loop -> object -> for in loop -> iterate over all the prop of the object , 
+// // inherited which are enumrable to for in
+// for (let key in obj3) {
+//     console.log("Keys are ", key);
+// }
 
-/********for in loop for your own poperties******/
-// 1.
-// O(N)
-for(let key in obj3){
-    let isMyKey = obj3.hasOwnProperty(key);
-    if(isMyKey){
-        console.log("Actual key's are: ", key);
-    }
-}
+// /********for in loop for your own poperties******/
+// // 1.
+// // O(N)
+// for(let key in obj3){
+//     let isMyKey = obj3.hasOwnProperty(key);
+//     if(isMyKey){
+//         console.log("Actual key's are: ", key);
+//     }
+// }
 
-// Question: Can you write a loop to print all members of my object but you need to ignore member of all parent and gParent class. And Can you optimize that operations.
-for(let key in obj3){
-    let isMyKey = obj3.hasOwnProperty(key);
-    if(isMyKey){
-        console.log("Actual key's are: ", key);
-    }else{
-        break;
-    }
-}
+// // Question: Can you write a loop to print all members of my object but you need to ignore member of all parent and gParent class. And Can you optimize that operations.
+// for(let key in obj3){
+//     let isMyKey = obj3.hasOwnProperty(key);
+//     if(isMyKey){
+//         console.log("Actual key's are: ", key);
+//     }else{
+//         break;
+//     }
+// }
 
-for(let key in obj3){
-    if(obj3.hasOwnProperty(key)){
-        console.log("My Keys are ", key);
-    }else if(obj2.hasOwnProperty(key)){
-        console.log("Parent Keys are ", key);
-    }else{
-        console.log("grandParent Keys are ", key);
-    }
-}
+// for(let key in obj3){
+//     if(obj3.hasOwnProperty(key)){
+//         console.log("My Keys are ", key);
+//     }else if(obj2.hasOwnProperty(key)){
+//         console.log("Parent Keys are ", key);
+//     }else{
+//         console.log("grandParent Keys are ", key);
+//     }
+// }
 
 
 
